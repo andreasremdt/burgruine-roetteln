@@ -1,0 +1,23 @@
+:root {
+  /* Fonts */
+  --ff-sans-serif: Open Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --ff-serif: Cormorant Garamond, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --fs-base: 16px;
+  --fs-sm: 14px;
+  --fs-lg: 18px;
+
+  /* Colors */
+  --clr-neutral-50: oklch(98.5% 0 0);
+  --clr-neutral-100: oklch(97% 0 0);
+  --clr-neutral-200: oklch(92.2% 0 0);
+  --clr-neutral-300: oklch(87% 0 0);
+  --clr-neutral-400: oklch(70.8% 0 0);
+  --clr-neutral-500: oklch(55.6% 0 0);
+  --clr-neutral-600: oklch(43.9% 0 0);
+  --clr-neutral-700: oklch(37.1% 0 0);
+  --clr-neutral-800: oklch(26.9% 0 0);
+  --clr-neutral-900: oklch(20.5% 0 0);
+  --clr-neutral-950: oklch(14.5% 0 0);
+}
