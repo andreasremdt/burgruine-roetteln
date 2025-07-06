@@ -1,0 +1,23 @@
+.font-sans {
+  font-family: var(--ff-sans-serif);
+}
+
+.font-serif {
+  font-family: var(--ff-serif);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.lead {
+  font-size: 1.75rem;
+}

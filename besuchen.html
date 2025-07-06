@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Die Burgruine Rötteln ist eine 200 Jahre alte Burg im Landkreis Lörrach.">
+  <meta name="author" content="Andreas Remdt">
+
+  <title>Ihr Besuch - Burgruine Rötteln</title>
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/heros.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+  <header class="top-header font-sans">
+    <div class="container">
+      <p>Täglich geöffnet von 10:00 - 18:00 Uhr</p>
+
+      <nav>
+        <a href="#">Anfahrt</a>
+        <a href="#">Eintrittspreise</a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="main-header light">
+    <div class="container">
+      <a href="index.html" class="logo">Burgruine Rötteln</a>
+
+      <nav class="font-sans">
+        <ul>
+          <li><a href="burg.html">Die Burg</a></li>
+          <li><a href="besuchen.html">Ihr Besuch <svg role="presentation" width="20" height="20">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg></a>
+            <ul>
+              <li><a href="besuchen.html#anfahrt">Anfahrt</a></li>
+              <li><a href="besuchen.html#veranstaltungen">Veranstaltungen</a></li>
+            </ul>
+          </li>
+          <li><a href="fuehrungen.html">Führungen <svg role="presentation" width="20" height="20">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg></a>
+            <ul>
+              <li><a href="./fuehrungen/regulaere-fuehrungen.html">Reguläre Führungen</a></li>
+              <li><a href="./fuehrungen/kinder-schulklassen.html">Kinder- und Schulklassen</a></li>
+              <li><a href="./fuehrungen/sonderfuehrungen.html">Sonderführungen</a></li>
+              <li><a href="./fuehrungen/virtuelle-fuehrungen.html">Virtuelle Führungen</a></li>
+              <li><a href="./fuehrungen/kindergeburtstage.html">Kindergeburtstage</a></li>
+              <li><a href="./fuehrungen/burgwaechterrundgang.html">Burgwächterrundgang</a></li>
+            </ul>
+          </li>
+          <li><a href="verein.html">Der Verein</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="image-hero">
+      <div class="container">
+        <h1>Ihr Besuch</h1>
+      </div>
+    </section>
+
+    <section class="visit-page">
+      <div class="container small">
+        <dl class="font-sans meta-info inline">
+          <div>
+            <dt>
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-clock"></use>
+              </svg>
+              Öffnungszeiten
+            </dt>
+            <dd>Täglich 10:00 - 18:00 Uhr<br>Der letzte Einlass ist eine halbe Stunde vorher.</dd>
+          </div>
+          <div>
+            <dt>
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-map-pin"></use>
+              </svg>
+              Lage
+            </dt>
+            <dd>Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="visit-prices">
+      <div class="container small">
+        <h2>Eintrittspreise</h2>
+        <p class="intro">Eintrittskarten können nur vor Ort an der Kasse erworben werden.</p>
+
+        <div>
+          <details>
+            <summary>
+              Erwachsene
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg>
+            </summary>
+            <div class="content">
+              <p>Erwachsene ab 14 Jahren zahlen <b>3,00€</b> Eintritt.</p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Schüler und Studenten
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg>
+            </summary>
+            <div class="content">
+              <p>Schüler und Studenten benötigen einen Ausweis und zahlen <b>2,50€</b> Eintritt.</p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Kinder
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg>
+            </summary>
+            <div class="content">
+              <p>Kinder unter 6 Jahren haben <b>kostenlosen Eintritt</b>. Die Kosten für Kinder ab 6 bis 14 Jahren
+                betragen
+                <b>1,50€</b>.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Gruppen
+              <svg role="presentation" width="24" height="24">
+                <use href="./icons/symbol-defs.svg#icon-chevron-down"></use>
+              </svg>
+            </summary>
+            <div class="content">
+              <p>Wir bieten Gruppenführungen ab 20 Personen an. Der Preis pro Person beträgt <b>2,50€</b>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit-directions">
+      <div class="map-container vertical" role="presentation" data-map></div>
+
+      <div class="content">
+        <h2 id="anfahrt">Anfahrt</h2>
+
+        <h3>Mit der Bahn</h3>
+        <p>Bis Haltestelle Haagen/Messe. Von dort aus zu Fuß dem ausgeschilderten Weg folgen.<br>Gehzeit ca. 30 Minuten.
+        </p>
+
+        <h3>Mit dem Bus</h3>
+        <p>SWEG Linie 16 bis Haltestelle Röttelnweiler. Von dort Gehzeit ca. 10 Minuten.<br>
+          SWEG Linie 2 von Kandern über Busbahnhof Lörrach. Ab dort wieder mit Linie 16.</p>
+
+        <h3>Mit dem Auto</h3>
+        <p>Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg</p>
+        <a href="http://www.google.de/url?sa=t&rct=j&q=&esrc=s&frm=1&source=web&cd=16&cad=rja&ved=0CMIBEPUXMA8&url=http%3A%2F%2Fmaps.google.de%2Fmaps%3Fgl%3Dde%26daddr%3D79541%2BL%25C3%25B6rrach%26panel%3D1%26f%3Dd%26fb%3D1%26dirflg%3Dd%26geocode%3D0%2C47.637936%2C7.66834"
+          target="_blank" class="button primary">Routenplaner</a>
+      </div>
+    </section>
+
+    <section class="visit-events">
+      <div class="container small">
+        <h2 id="veranstaltungen">Veranstaltungen</h2>
+
+        <article>
+          <time datetime="2025-01-24">ab 24. Januar <span class="year">2025</span></time>
+          <div>
+            <h3>Ausstellung zu den Bauernkriegen</h3>
+            <p>Beginn der Ausstellung zu den Bauernkriegen im Dreiländermuseum (Umbrüche 1525 - Bauernkrieg &
+              Täuferbewegung) bis
+              25. Mai.</p>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">9. März <span class="year">2025</span></time>
+          <div>
+            <h3>Fasnachtsfeuer beim Röttler Parkplatz</h3>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">28. März <span class="year">2025</span></time>
+          <div>
+            <h3>1. Öffentlicher Rundgang mit dem Burgwächter</h3>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">1. Mai <span class="year">2025</span><span class="time">11:00</span></time>
+          <div>
+            <h3>1. Mai Hock auf Rötteln</h3>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">3. - 4. Mai <span class="year">2025</span></time>
+          <div>
+            <h3>3D-Jagdturnier vom Long Bow Team Minseln rund um die Burgruine Rötteln</h3>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">24. - 25. Mai <span class="year">2025</span><span class="time">11:00 &
+              15:00
+            </span></time>
+          <div>
+            <h3>Öffentliche Sonderführungen</h3>
+            <p>Über die Burgruine anlässlich der Besetzung der Burg durch die bäuerliche Bevölkerung.</p>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">ab 20. Juni <span class="year">2025</span></time>
+          <div>
+            <h3>Burgfestspiele Rötteln</h3>
+            <p>Immer Freitag und Samstagabend.<br>Dieses Jahr: "Tartuffe der Betrüger", Eine Komödie über
+              Scheinheiligkeit, Manipulation und Hörigkeit<br>Das letzte Event findet am 2. August statt.</p>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">7. September <span class="year">2025</span></time>
+          <div>
+            <h3>Hochburgfest auf der Hochburg bei Emmendingen</h3>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">14. September <span class="year">2025</span></time>
+          <div>
+            <h3>Tag des offenen Denkmals</h3>
+            <p>Öffentliche Sonderführungen, die einen Einblick in die Arbeit hinter die Kulissen vom Röttelnbund e.V.
+              ermöglichen.</p>
+          </div>
+        </article>
+
+        <article>
+          <time datetime="2025-01-24">24. Oktober <span class="year">2025</span></time>
+          <div>
+            <h3>2. Öffentlicher Rundgang mit dem Burgwächter</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="visit-tours">
+      <div class="container">
+        <h2 class="title-primary">Unsere Führungen</h2>
+        <p class="subtitle">Erleben Sie die Burgruine Rötteln und ihre Geschichte</p>
+
+        <div class="grid">
+          <article class="event-listing">
+            <img src="./images/burg-tor.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Reguläre Führungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/regulaere-fuehrungen.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing">
+            <img src="./images/treppe.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Kinder- und Schulklassen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/kinder-schulklassen.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing">
+            <img src="./images/sicht-vom-hof.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Sonderführungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/sonderfuehrungen.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing">
+            <img src="./images/burg-turm-fahne.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Virtuelle Führungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/virtuelle-fuehrungen.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing">
+            <img src="./images/burg-eingang.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Kindergeburtstage</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/kindergeburtstage.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing">
+            <img src="./images/aussicht.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Ein Abend mit dem Burgwächter</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/burgwaechterrundgang.html">Mehr erfahren</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer font-sans">
+    <figure>
+      <img src="./images/aussicht.jpg" alt="" width="400" height="400">
+      <img src="./images/burg-eingang.jpg" alt="" width="400" height="400">
+      <img src="./images/burg-tor.jpg" alt="" width="400" height="400">
+      <img src="./images/burg-turm-fahne.jpg" alt="" width="400" height="400">
+      <img src="./images/treppe.jpg" alt="" width="400" height="400">
+      <img src="./images/sicht-vom-hof.jpg" alt="" width="400" height="400">
+    </figure>
+
+    <div class="container">
+      <div>
+        <p class="font-serif logo">Burgruine Rötteln</p>
+        <p>Die Burgruine Rötteln ist eine der größten und imposantesten Burgen in Südbaden. Sie können Sie im Landkreis
+          Lörrach besuchen.</p>
+      </div>
+
+      <nav>
+        <h2 class="font-serif">Seitenmenü</h2>
+
+        <a href="burg.html">Die Burg</a>
+        <a href="besuchen.html">Ihr Besuch</a>
+        <a href="verein.html">Der Verein</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+      <div>
+        <h2 class="font-serif">Öffnungszeiten</h2>
+
+        <h3>Mitte März - Anfang November</h3>
+        <p>Täglich 10:00 - 18:00 Uhr</p>
+
+        <h3>Anfang November - Mitte März</h3>
+        <p>Jedes Wochenende und an Feiertagen 10:00 - 16:00 Uhr</p>
+
+        <p>Der letzte Einlass ist jeweils eine halbe Stunde vor Schließung.</p>
+      </div>
+
+      <div>
+        <h2 class="font-serif">Kontakt</h2>
+
+        <p>Röttelnbund e.V. Haagen<br>
+          Burgruine Rötteln<br>
+          79541 Lörrach Haagen<br><br>
+          <a href="tel:+49762156494">+49 (0)7621 56494</a><br>
+          <a href="mailto:info@burgruine-roetteln.de">info@burgruine-roetteln.de</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2025 Burgruine Rötteln. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/leaflet.js"></script>
+</body>
+
+</html>

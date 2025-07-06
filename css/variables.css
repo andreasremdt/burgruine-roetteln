@@ -9,6 +9,8 @@
   --fs-lg: 18px;
 
   /* Colors */
+  --clr-white: white;
+
   --clr-neutral-50: oklch(98.5% 0 0);
   --clr-neutral-100: oklch(97% 0 0);
   --clr-neutral-200: oklch(92.2% 0 0);
@@ -20,4 +22,16 @@
   --clr-neutral-800: oklch(26.9% 0 0);
   --clr-neutral-900: oklch(20.5% 0 0);
   --clr-neutral-950: oklch(14.5% 0 0);
+
+  --clr-primary-50: #fbf8f3;
+  --clr-primary-100: #f5ede0;
+  --clr-primary-200: #e9d8bf;
+  --clr-primary-300: #dbbe96;
+  --clr-primary-400: #cb9e6c;
+  --clr-primary-500: #c0854f;
+  --clr-primary-600: #b37243;
+  --clr-primary-700: #955a39;
+  --clr-primary-800: #784a34;
+  --clr-primary-900: #623e2d;
+  --clr-primary-950: #341f16;
 }

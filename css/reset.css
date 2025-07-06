@@ -16,11 +16,14 @@ h2,
 h3,
 h4,
 p,
-figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+  margin-block-start: unset;
+}
+
+figure {
+  margin: unset;
 }
 
 ul[role="list"],
@@ -30,7 +33,8 @@ ol[role="list"] {
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: unset;
 }
 
 h1,

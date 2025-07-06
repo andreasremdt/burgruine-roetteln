@@ -7,7 +7,7 @@
   <meta name="description" content="Die Burgruine Rötteln ist eine 200 Jahre alte Burg im Landkreis Lörrach.">
   <meta name="author" content="Andreas Remdt">
 
-  <title>Willkommen - Burgruine Rötteln</title>
+  <title>Führungen - Burgruine Rötteln</title>
 
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/reset.css">
@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="/css/heros.css">
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body>
@@ -31,7 +33,7 @@
     </div>
   </header>
 
-  <header class="main-header">
+  <header class="main-header light">
     <div class="container">
       <a href="index.html" class="logo">Burgruine Rötteln</a>
 
@@ -66,97 +68,70 @@
   </header>
 
   <main>
-    <section class="main-hero">
+    <section class="image-hero">
       <div class="container">
-        <h1>Willkommen auf der Burgruine Rötteln</h1>
-        <p>Eine der größten und imposantesten Burgruinen Südbadens wartet auf Ihre Erkundung.</p>
-
-        <div>
-          <a href="#" class="button primary">Mehr über die Burg &rarr;</a>
-          <a href="#" class="button secondary">Planen Sie Ihren Besuch &rarr;</a>
-        </div>
+        <h1>Führungen</h1>
       </div>
     </section>
 
-    <section class="about-intro">
+    <section class="visit-tours light">
       <div class="container">
-        <div>
-          <h2 class="title-primary">Über die Burg</h2>
-
-          <p>Eine der größten und imposantesten Burgruinen Südbadens. Mit einer Länge von 300 Metern und einer Breite
-            von 30 Metern
-            erstreckt sie sich auf einem Bergsporn hoch über Lörrach, am Rande des Dreiländerecks D-CH-F.</p>
-
-          <p>Die Burganlage, eine schöne Panoramasicht vom hohen Bergfried, ein Museum, ein Biergarten in der Unterburg
-            und ein gepflegter Grillplatz
-            direkt hinter der Burg, bieten ein schönes Ausflugsziel für Jung und Alt. In den Sommermonaten finden die
-            Burgfestspiele
-            statt und das Restaurant und der Biergarten bieten ein gutes kulinarisches Angebot in schönem Ambiente.</p>
-
-          <p>Nach vorheriger Absprache gibt es Führungen und auch Themenführungen. Ebenso ist es möglich auf Rötteln
-            standesamtlich zu heiraten.</p>
-        </div>
-
-        <dl class="font-sans meta-info">
-          <dt>
-            <svg role="presentation" width="24" height="24">
-              <use href="./icons/symbol-defs.svg#icon-clock"></use>
-            </svg>
-            Öffnungszeiten
-          </dt>
-          <dd>Täglich 10:00 - 18:00 Uhr<br>Der letzte Einlass ist eine halbe Stunde vorher.</dd>
-          <dt>
-            <svg role="presentation" width="24" height="24">
-              <use href="./icons/symbol-defs.svg#icon-map-pin"></use>
-            </svg>
-            Lage
-          </dt>
-          <dd>Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg</dd>
-          <dt>
-            <svg role="presentation" width="24" height="24">
-              <use href="./icons/symbol-defs.svg#icon-cloud-lightning"></use>
-            </svg>
-            Ausnahmen
-          </dt>
-          <dd>Bei Eis- oder Schneeglätte sowie Unwetter bleiben die Oberburg und das Museum geschlossen.
-          </dd>
-        </dl>
-      </div>
-    </section>
-
-    <section class="about-offers">
-      <div class="container">
-        <div>
-          <h2>Entdecken Sie unser Angebot und planen Sie Ihren Besuch</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, vitae dolor facilis architecto tempore
-            obcaecati libero quia accusantium ad sint, repellendus a reiciendis explicabo iusto. Aliquid iste illo
-            libero
-            deleniti.</p>
-        </div>
+        <h2 class="title-primary">Unsere Führungen</h2>
+        <p class="subtitle">Erleben Sie die Burgruine Rötteln und ihre Geschichte</p>
 
         <div class="grid">
-          <article>
-            <img src="./icons/history.svg" width="60" height="60" alt="">
-            <h3><a href="burg.html">Historie der Burg</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vitae dolor facilis architecto tempore</p>
+          <article class="event-listing light">
+            <img src="./images/burg-tor.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Reguläre Führungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/regulaere-fuehrungen.html">Mehr erfahren</a>
+            </div>
           </article>
 
-          <article>
-            <img src="./icons/history.svg" width="60" height="60" alt="">
-            <h3><a href="fuehrungen.html">Führungen</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vitae dolor facilis architecto tempore</p>
+          <article class="event-listing light">
+            <img src="./images/treppe.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Kinder- und Schulklassen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/kinder-schulklassen.html">Mehr erfahren</a>
+            </div>
           </article>
 
-          <article>
-            <img src="./icons/history.svg" width="60" height="60" alt="">
-            <h3><a href="besuchen.html">Ihr Besuch</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vitae dolor facilis architecto tempore</p>
+          <article class="event-listing light">
+            <img src="./images/sicht-vom-hof.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Sonderführungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/sonderfuehrungen.html">Mehr erfahren</a>
+            </div>
           </article>
 
-          <article>
-            <img src="./icons/history.svg" width="60" height="60" alt="">
-            <h3><a href="verein.html">Der Verein</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vitae dolor facilis architecto tempore</p>
+          <article class="event-listing light">
+            <img src="./images/burg-turm-fahne.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Virtuelle Führungen</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/virtuelle-fuehrungen.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing light">
+            <img src="./images/burg-eingang.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Kindergeburtstage</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/kindergeburtstage.html">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="event-listing light">
+            <img src="./images/aussicht.jpg" alt="" width="400" height="400">
+            <div>
+              <h3>Ein Abend mit dem Burgwächter</h3>
+              <p>Unserer normalen Führungen werden, wie alle Führungen</p>
+              <a href="./fuehrungen/burgwaechterrundgang.html">Mehr erfahren</a>
+            </div>
           </article>
         </div>
       </div>
@@ -219,6 +194,10 @@
       <p>&copy; 2025 Burgruine Rötteln. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/leaflet.js"></script>
 </body>
 
 </html>
