@@ -1,0 +1,75 @@
+---
+import Container from "../../components/container.astro";
+import Input from "../../components/input.astro";
+import Label from "../../components/label.astro";
+import Select from "../../components/select.astro";
+import SubmitButton from "../../components/submit-button.astro";
+import Textarea from "../../components/textarea.astro";
+---
+
+<section class="pb-24 lg:pb-40">
+  <Container class="grid grid-cols-1 gap-16 lg:grid-cols-3">
+    <div>
+      <h2 class="mb-4 text-4xl text-neutral-900">
+        Reservieren Sie eine Führung mit dem Burgwächter
+      </h2>
+      <p class="mb-4 text-xl">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quidem
+        saepe totam atque nobis! Cupiditate quia est aliquid dicta consequatur.
+      </p>
+      <p class="mb-4 text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+        tempore?
+      </p>
+    </div>
+
+    <form action="" method="POST" class="lg:col-span-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
+        <div class="mb-4">
+          <Label for="name">Ihr Name</Label>
+          <Input name="name" id="name" required />
+        </div>
+        <div class="mb-4">
+          <Label for="email">Ihre E-Mail-Adresse</Label>
+          <Input type="email" name="email" id="email" required />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-4 sm:gap-4">
+        <div class="mb-4 sm:col-span-2 md:col-span-3">
+          <Label for="tour">Art der Führung</Label>
+          <Select name="tour" id="tour" required data-select>
+            <option value="Reguläre Führung">Reguläre Führung</option>
+            <option value="Kinder und Schulklassen"
+              >Kinder und Schulklassen</option
+            >
+            <option value="Sonderführungen">Sonderführung</option>
+            <option value="Virtuelle Führung">Virtuelle Führung</option>
+            <option value="Kindergeburtstag">Kindergeburtstag</option>
+            <option value="Burgwächterrundgang">Burgwächterrundgang</option>
+          </Select>
+        </div>
+        <div class="mb-4 sm:col-span-2 md:col-span-1">
+          <Label for="participants">Anzahl Teilnehmer</Label>
+          <Input type="number" name="participants" id="participants" required />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <Label for="message">Ihre Nachricht</Label>
+        <Textarea name="message" id="message" rows="5" required />
+      </div>
+
+      <SubmitButton>Nachricht senden &rarr;</SubmitButton>
+    </form>
+  </Container>
+</section>
+
+<script>
+  let select = document.querySelector<HTMLSelectElement>("[data-select]");
+  let type = new URL(location.href).searchParams.get("type");
+
+  if (select && type) {
+    select.value = type;
+  }
+</script>

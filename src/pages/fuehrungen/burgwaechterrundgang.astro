@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Burgwächterrundgang">
+  <Hero title="Burgwächterrundgang" subtitle="Entdecken Sie Geschichte">
+    Anderenorts gibt es Nachtwächter - Der Röttelnbund hat einen Burgwächter.
+  </Hero>
+  <About type="Burgwächterrundgang">
+    <p class="mb-4 text-xl">
+      Der Burgwächter hat die Aufgabe am Abend, wenn die Sonne untergeht, die
+      Burgtore zu schließen und die wachhabenden Soldaten in den Wehrgängen mit
+      ihren Wachtürmen zu kontrollieren.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Vor seinem Kontrollgang bekommen seine Gäste in der Burgstube ein
+      mittelalterliches Vesper zur Stärkung serviert. Danach können sie ihn auf
+      seinem abendlichen Rundgang begleiten.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Dieses besondere Burgerlebnis wird in den kühleren Jahreszeiten angeboten.
+      Es bietet sich ideal für Gruppen und Verein (ab 15 bis ca. 35 Personen)
+      an. Im Frühjahr und im Herbst gibt es jeweils einen öffentlichen Rundgang
+      (Termine bitte aus dem Veranstaltungskalender oder der Tagespresse
+      entnehmen). Eine direkte Anfrage an den Burgwächter per Mail ist auch
+      möglich.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Darin enthalten sind ein Begrüßungstrunk, das Vesper und die Führung.
+      Während des Essen erfahren die Gäste vieles über die mittelalterlichen
+      Essgewohnheiten und das Leben der damaligen Zeit. Außerdem werden die
+      Ursprünge vieler heute noch gebräuchicher Redewendungen und Sprüche
+      erklärt. Gesamtdauer etwa vier bis viereinhalb Stunden. Die Preise und
+      weitere Informationen erhalten Sie auf Anfrage. Die Getränke während des
+      Vespers werden seperat abgerechnet. Anfragen unter Telefon 07621 / 56494
+      oder direkt per Mail an <a
+        href="mailto:info@burgruine-roetteln.de"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >info@burgruine-roetteln.de</a
+      >.
+    </p>
+  </About>
+  <Gallery />
+</BaseLayout>

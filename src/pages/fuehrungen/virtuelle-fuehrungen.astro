@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Virtuelle Führungen">
+  <Hero title="Virtuelle Führungen" subtitle="Entdecken Sie Geschichte">
+    Es muß ja nicht gleich das Heidelberger Schloß sein. Hoch über Lörrach ist
+    ganz in der Nähe die Rötteler Burg zu besichtigen.
+  </Hero>
+  <About type="Virtuelle Führung">
+    <p class="mb-4 text-xl">
+      Nicht jeder, dessen Herz für Burgromantik und das Leben im Mittelalter
+      schlägt, kann sich auf den Weg zur Burg hoch über Lö - Haagen machen. Wem
+      der Gang auf die Burg Rötteln zu beschwerlich ist, kann an einer
+      virtuellen Führung teilnehmen. Deshalb beschloss Heiner Mues vom
+      Röttelnbund e.V. die Burg zu den Menschen zu bringen. Die Burg kommt in
+      Form einer Power Point Präsentation in Ihre Räumlichkeiten (zu Hause,
+      Altennachmittag, Pflege- oder Seniorenheim).
+    </p>
+
+    <p class="mb-4 text-xl">
+      Während des Vortrags präsentiert sich die Burg einmal von einer ganz
+      anderen Seite. Es werden Bilder ud Eindrücke vermittelt, die bei einer
+      normalen Burgführung nicht erlebt werden können. Möglicherweise wird das
+      Geheimnis um den „Rittersprung“ oder der Geheimgang gelüftet, was in
+      Zeiten von elektronischen Präsentationsprogrammen ja nicht sonderlich
+      schwierig ist. Die neueste Drohnentechnik erlaubt den virtuell Geführten
+      sogar Blicke, die so in der freien Natur überhaupt nicht möglich sind.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Anfragen und Terminabsprachen über <a
+        href="mailto:info@burgruine-roetteln.de"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >info@burgruine-roetteln.de</a
+      >. Die Dauer der virtuellen Führung, vorgetragen in einer authentischen
+      Knechtsgewandung, dauert ca. 2 Stunden. Die Kosten, unabhängig der
+      Personenzahl, beträgt zur Zeit 120,- Euro plus einer geringen
+      Anfahrtspauschale.
+    </p>
+  </About>
+  <Gallery />
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/base-layout.astro";
+import Intro from "../views/burg/intro.astro";
+import Hero from "../views/burg/hero.astro";
+import Timeline from "../views/burg/timeline.astro";
+import Spacer from "../views/burg/spacer.astro";
+import Gallery from "../components/gallery.astro";
+---
+
+<BaseLayout title="Die Burg">
+  <Hero />
+  <Intro />
+  <Spacer />
+  <Timeline />
+  <Gallery title="Bilder unserer Burg" />
+</BaseLayout>

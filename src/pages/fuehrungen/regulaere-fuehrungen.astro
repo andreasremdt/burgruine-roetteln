@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Reguläre Führungen">
+  <Hero title="Reguläre Führungen" subtitle="Entdecken Sie Geschichte">
+    Die Burg Rötteln, weithin sichtbare Spornburg über Lörrach-Haagen, zählt zu
+    den imposantesten mittelalterlichen Festungen im äußersten Südwesten
+    Baden-Württembergs und ist mit ihren zwei Wehrtürmen die drittgrößte
+    Burgruine Badens
+  </Hero>
+  <About type="Reguläre Führung">
+    <p class="mb-4 text-xl">
+      Unserer normalen Führungen werden, wie alle Führungen, nach vorheriger
+      Anmeldung über <a
+        href="mailto:info@burgruine-roetteln.de"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >info@burgruine-roetteln.de</a
+      > angeboten und individuell mit den interessierten Besuchern abgesprochen.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Der Treffpunkt ist in der Regel der Pranger oberhalb des Biergarten in der
+      Unterburg. Die Kosten für eine ca. 90-minütigen Burgführung betragen als
+      Grundpauschale derzeit 70.- Euro. In dieser Grundpauschale sind für 10
+      Personen die Eintritte auf die Oberburg und ins kleine Burgmuseum
+      enthalten. Für jede weitere Person werden 7.- Euro hinzu gerechnet.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Die Gruppengröse sollte 25 Personen nicht überschreiten. Bei größeren
+      Gruppen werden weitere Burgführer eingesetzt.
+    </p>
+  </About>
+  <Gallery />
+</BaseLayout>

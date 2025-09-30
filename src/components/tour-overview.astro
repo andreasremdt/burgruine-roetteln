@@ -1,0 +1,211 @@
+---
+import { Image } from "astro:assets";
+import clsx from "clsx";
+import image1 from "../assets/images/aussicht.jpg";
+import image2 from "../assets/images/burg-eingang.jpg";
+import image3 from "../assets/images/burg-tor.jpg";
+import image4 from "../assets/images/burg-turm-fahne.jpg";
+import image5 from "../assets/images/treppe.jpg";
+import image6 from "../assets/images/sicht-vom-hof.jpg";
+import Container from "./container.astro";
+
+interface Props {
+  variant?: "light" | "dark";
+}
+
+const { variant = "light" } = Astro.props;
+---
+
+<section
+  class={clsx("lg:py-40 py-24", {
+    "bg-primary-100": variant === "light",
+    "bg-neutral-900 text-white": variant === "dark",
+  })}
+>
+  <Container>
+    <h2
+      class={clsx(
+        "mb-2 flex items-center font-sans font-medium uppercase before:mr-4 before:block before:h-px before:w-8",
+        {
+          "before:bg-neutral-600": variant === "light",
+          "before:bg-white": variant === "dark",
+        },
+      )}
+    >
+      Unsere Führungen
+    </h2>
+    <p class="mb-16 text-5xl">
+      Erleben Sie die Burgruine Rötteln und ihre Geschichte
+    </p>
+
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-16">
+      <article class="relative">
+        <Image
+          src={image1}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Reguläre Führungen</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/regulaere-fuehrungen">Mehr erfahren</a
+          >
+        </div>
+      </article>
+
+      <article class="relative">
+        <Image
+          src={image2}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Kinder- und Schulklassen</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/kinder-schulklassen">Mehr erfahren</a
+          >
+        </div>
+      </article>
+
+      <article class="relative">
+        <Image
+          src={image3}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Sonderführungen</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/sonderfuehrungen">Mehr erfahren</a
+          >
+        </div>
+      </article>
+
+      <article class="relative">
+        <Image
+          src={image4}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Virtuelle Führungen</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/virtuelle-fuehrungen">Mehr erfahren</a
+          >
+        </div>
+      </article>
+
+      <article class="relative">
+        <Image
+          src={image5}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Kindergeburtstage</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/kindergeburtstage">Mehr erfahren</a
+          >
+        </div>
+      </article>
+
+      <article class="relative">
+        <Image
+          src={image6}
+          alt=""
+          width="400"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          format="webp"
+          class="mb-4 aspect-video w-full rounded-sm object-cover sm:aspect-square"
+        />
+        <div>
+          <h3 class="mb-2 text-3xl">Ein Abend mit dem Burgwächter</h3>
+          <a
+            class={clsx(
+              "font-sans font-medium uppercase transition-colors after:absolute after:inset-0",
+              {
+                "text-primary-300 hover:text-primary-400 focus-visible:text-primary-400":
+                  variant === "dark",
+                "text-primary-500 hover:text-primary-500 focus-visible:text-primary-500":
+                  variant === "light",
+              },
+            )}
+            href="/fuehrungen/burgwaechterrundgang">Mehr erfahren</a
+          >
+        </div>
+      </article>
+    </div>
+  </Container>
+</section>

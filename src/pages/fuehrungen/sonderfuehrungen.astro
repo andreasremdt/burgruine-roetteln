@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Sonderführungen">
+  <Hero title="Sonderführungen" subtitle="Entdecken Sie Geschichte">
+    Es muß ja nicht gleich das Heidelberger Schloß sein. Hoch über Lörrach ist
+    ganz in der Nähe die Rötteler Burg zu besichtigen.
+  </Hero>
+  <About type="Sonderführung">
+    <p class="mb-4 text-xl">
+      Etwas Besonderes ist es, die Burg bei Nacht zu besuchen. Bei dieser
+      Sonderführung werden die Gäste in den dunklen Abendstunden über die Burg
+      geführt, als Beleuchtung dient nur das Licht von authentischen,
+      mittelalterlichen Laternen. Der nächtliche Anblick der Landschaft bis hin
+      zur beleuchteten Stadt Basel wird unvergesslich bleiben.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Der Treffpunkt ist in der Regel der Pranger oberhalb des Biergarten in der
+      Unterburg. Die Kosten für eine ca. 90-minütigen Burgführung betragen als
+      Grundpauschale derzeit 70.- Euro. In dieser Grundpauschale sind für 10
+      Personen die Eintritte auf die Oberburg und ins kleine Burgmuseum
+      enthalten. Für jede weitere Person werden 7.- Euro hinzu gerechnet.
+    </p>
+
+    <p class="mb-4 text-xl">Weitere spezielle Themen könnten sein:</p>
+
+    <ul class="mb-4 ml-4 list-disc space-y-1 pl-4 text-xl">
+      <li>Baugeschichte der Burg Röttel</li>
+      <li>
+        Die Arbeit des Röttelnbund, wie wird die Burgruine erhalten. „Ein Blick
+        hinter die Kulissen“.
+      </li>
+      <li>
+        Die Herrschaft von Rötteln im 14. Jahrhundert (mit einem voherigen
+        Kurzvortrag)
+      </li>
+      <li>
+        Medizinische Versorgung von der Antke bis Heute mit Schwerpunkt
+        Mittelalter (mit vorherigem Kurzvortrag)
+      </li>
+    </ul>
+  </About>
+  <Gallery />
+</BaseLayout>

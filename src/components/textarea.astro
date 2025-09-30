@@ -1,0 +1,15 @@
+---
+import clsx from "clsx";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"textarea"> {}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<textarea
+  class={clsx(
+    "w-full rounded-sm py-2 font-sans border border-neutral-300 px-4 hover:border-neutral-400 focus-visible:border-neutral-400 transition-colors",
+    className,
+  )}
+  {...props}></textarea>

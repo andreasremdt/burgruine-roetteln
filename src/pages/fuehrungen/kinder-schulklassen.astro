@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Führungen für Kinder und Schulklassen">
+  <Hero
+    title="Führungen für Kinder und Schulklassen"
+    subtitle="Entdecken Sie Geschichte"
+  >
+    Die Burg Rötteln, weithin sichtbare Spornburg über Lörrach-Haagen, zählt zu
+    den imposantesten mittelalterlichen Festungen im äußersten Südwesten
+    Baden-Württembergs und ist mit ihren zwei Wehrtürmen die drittgrößte
+    Burgruine Badens
+  </Hero>
+  <About type="Kinder und Schulklassen">
+    <p class="mb-4 text-xl">
+      Auch hier gilt: Anfrage und Terminabsprache über <a
+        href="mailto:info@burgruine-roetteln.de"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >info@burgruine-roetteln.de</a
+      >. Treffpunkt ist am Pranger. In der Regel werden Kinderburgführungen von
+      unseren Burgführern in authentischer, mittelalterlicher Gewandung
+      durchgeführt und es wird die Möglichkeit gegeben einige Waffen anzufassen.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Die Führung dauert ca. 90 Minuten, kann aber individuell angepasst werden.
+      Die Kosten setzen sich aus einer Grundpauschale von 70.- Euro plus derzeit
+      1,50 Euro pro Kind zusammen. Kinder unter sechs Jahren sind kostenfrei. In
+      diesem Betrag sind 2 Begleitpersonen, die Burgführung sowie die Eintritte
+      in Oberburg und Museum enthalten.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Leider können wir keine aussagekräftigen Fotos von solchen Kinderführungen
+      auf unserer Homepage zeigen - Der Aufwand für die Einwilligungserklärungen
+      von Kindern, Schülern und Eltern sowie die Datenschutzbestimmungen sind zu
+      umfangreich.
+    </p>
+  </About>
+  <Gallery />
+</BaseLayout>

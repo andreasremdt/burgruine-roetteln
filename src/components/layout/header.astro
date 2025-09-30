@@ -1,0 +1,269 @@
+---
+import clsx from "clsx";
+import Container from "../container.astro";
+
+interface Props {
+  border?: boolean;
+}
+
+const { border = true } = Astro.props;
+---
+
+<header class="relative z-10 text-neutral-900">
+  <Container
+    class={clsx("flex h-24 md:h-32 items-center justify-between gap-4", {
+      "border-b border-neutral-300": border,
+    })}
+  >
+    <a href="/" class="font-serif text-3xl sm:text-4xl">Burgruine Rötteln</a>
+
+    <button
+      type="button"
+      aria-label="Hauptmenü öffnen"
+      aria-live="polite"
+      aria-controls="menu"
+      aria-expanded="false"
+      data-action="toggle-menu"
+      class="z-20 block cursor-pointer transition-colors hover:text-neutral-700 focus-visible:text-neutral-700 lg:hidden"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        aria-hidden="true"
+        stroke="currentColor"
+        class="z-20 h-10 w-10"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="hidden"
+          d="M6 18 18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <nav
+      data-action="menu"
+      class="pointer-events-none fixed top-0 right-0 bottom-0 overflow-auto bg-white py-8 pr-32 pl-8 opacity-0 shadow-sm lg:pointer-events-auto lg:static lg:overflow-visible lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
+    >
+      <ul
+        class="flex flex-col gap-4 font-medium uppercase lg:flex-row lg:gap-10 lg:text-sm"
+      >
+        <li>
+          <a
+            href="/burg"
+            class="transition-colors hover:text-neutral-700 focus-visible:text-neutral-700"
+            >Die Burg</a
+          >
+        </li>
+        <li class="group relative">
+          <a
+            class="text flex items-center gap-2 transition-colors hover:text-neutral-700 focus-visible:text-neutral-700"
+            href="/besuchen"
+            >Ihr Besuch <svg
+              class="hidden lg:block"
+              role="presentation"
+              width="20"
+              height="20"
+            >
+              <use href="/symbol-defs.svg#icon-chevron-down"></use>
+            </svg></a
+          >
+          <ul
+            class="top-full left-0 rounded-sm bg-white py-2 group-focus-within:block group-hover:block lg:absolute lg:hidden lg:shadow-sm"
+          >
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/besuchen#anfahrt">Anfahrt</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/besuchen#eintrittspreise">Eintrittspreise</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/besuchen#veranstaltungen">Veranstaltungen</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="group relative">
+          <a
+            class="text flex items-center gap-2 transition-colors hover:text-neutral-700 focus-visible:text-neutral-700"
+            href="/fuehrungen"
+            >Führungen <svg
+              class="hidden lg:block"
+              role="presentation"
+              width="20"
+              height="20"
+            >
+              <use href="/symbol-defs.svg#icon-chevron-down"></use>
+            </svg></a
+          >
+          <ul
+            class="top-full left-0 rounded-sm bg-white py-2 group-focus-within:block group-hover:block lg:absolute lg:hidden lg:shadow-sm"
+          >
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/regulaere-fuehrungen">Reguläre Führungen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/kinder-schulklassen"
+                >Kinder- und Schulklassen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/sonderfuehrungen">Sonderführungen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/virtuelle-fuehrungen">Virtuelle Führungen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/kindergeburtstage">Kindergeburtstage</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/fuehrungen/burgwaechterrundgang">Burgwächterrundgang</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="group relative">
+          <a
+            class="text flex items-center gap-2 transition-colors hover:text-neutral-700 focus-visible:text-neutral-700"
+            href="/verein"
+            >Der Verein <svg
+              class="hidden lg:block"
+              role="presentation"
+              width="20"
+              height="20"
+            >
+              <use href="/symbol-defs.svg#icon-chevron-down"></use>
+            </svg></a
+          >
+          <ul
+            class="top-full left-0 rounded-sm bg-white py-2 group-focus-within:block group-hover:block lg:absolute lg:hidden lg:shadow-sm"
+          >
+            <li>
+              <a
+                class="block px-4 py-2 transition-colors hover:bg-neutral-100 focus-visible:bg-neutral-100"
+                href="/verein#arbeitsgruppe">Arbeitsgruppe</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            class="transition-colors hover:text-neutral-700 focus-visible:text-neutral-700"
+            href="/kontakt">Kontakt</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </Container>
+</header>
+
+<script>
+  let toggle = document.querySelector(
+    '[data-action="toggle-menu"]',
+  ) as HTMLButtonElement;
+  let menu = document.querySelector('[data-action="menu"]') as HTMLDivElement;
+  let [open, close] = toggle.querySelectorAll(
+    "path",
+  ) as NodeListOf<SVGPathElement>;
+  let links = menu.querySelectorAll("a") as NodeListOf<HTMLAnchorElement>;
+  let mediaQuery = window.matchMedia("(max-width: 768px)");
+  let firstLink = links[0];
+  let lastLink = links[links.length - 1];
+  let menuVisible = false;
+
+  function handleMenuToggle() {
+    menuVisible = !menuVisible;
+
+    menu.setAttribute("aria-hidden", String(!menuVisible));
+    toggle.setAttribute("aria-expanded", String(menuVisible));
+    toggle.setAttribute(
+      "aria-label",
+      `Hauptmenü ${menuVisible ? "schließen" : "öffnen"}`,
+    );
+    links.forEach((link) => (link.tabIndex = menuVisible ? 0 : -1));
+
+    if (menuVisible) {
+      menu.classList.remove("opacity-0", "pointer-events-none");
+
+      open.classList.add("hidden");
+      close.classList.remove("hidden");
+      document.body.classList.add("overflow-y-hidden");
+      firstLink.focus();
+    } else {
+      menu.classList.add("opacity-0", "pointer-events-none");
+      open.classList.remove("hidden");
+      close.classList.add("hidden");
+      document.body.classList.remove("overflow-y-hidden");
+      toggle.focus();
+    }
+  }
+
+  function handleFocusTrap(event: KeyboardEvent) {
+    if (event.shiftKey) {
+      if (document.activeElement === toggle) {
+        event.preventDefault();
+        lastLink.focus();
+      }
+    } else if (document.activeElement === lastLink) {
+      event.preventDefault();
+      toggle.focus();
+    }
+  }
+
+  function handleKeyDown(event: KeyboardEvent) {
+    if (menuVisible) {
+      if (event.key === "Escape") {
+        handleMenuToggle();
+      }
+
+      if (event.key === "Tab") {
+        handleFocusTrap(event);
+      }
+    }
+  }
+
+  function handleMediaChange(event: MediaQueryListEvent | MediaQueryList) {
+    if (event.matches) {
+      toggle.setAttribute("aria-expanded", String(menuVisible));
+      links.forEach((link) => (link.tabIndex = menuVisible ? 0 : -1));
+    } else {
+      links.forEach((link) => (link.tabIndex = 0));
+    }
+  }
+
+  toggle.addEventListener("click", handleMenuToggle);
+  document.addEventListener("keydown", handleKeyDown);
+  mediaQuery.addEventListener("change", handleMediaChange);
+
+  handleMediaChange(mediaQuery);
+</script>

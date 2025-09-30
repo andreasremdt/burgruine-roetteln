@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import clsx from "clsx";
+
+interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<div
+  class={clsx("rounded-sm bg-neutral-100 p-12 font-sans", className)}
+  {...props}
+>
+  <slot />
+</div>

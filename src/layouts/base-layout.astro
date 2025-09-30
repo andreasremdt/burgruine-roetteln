@@ -1,0 +1,40 @@
+---
+import clsx from "clsx";
+import Banner from "../components/layout/banner.astro";
+import Footer from "../components/layout/footer.astro";
+import Header from "../components/layout/header.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  shifted?: boolean;
+}
+
+const { title, shifted = true } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Die Burgruine Rötteln ist eine 200 Jahre alte Burg im Landkreis Lörrach."
+    />
+    <meta name="author" content="Andreas Remdt" />
+
+    <title>{title} - Burgruine Rötteln</title>
+  </head>
+  <body class="text-neutral-700">
+    <Banner />
+    <Header border={shifted} />
+
+    <main class={clsx("font-serif", { "-mt-24 md:-mt-32": shifted })}>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

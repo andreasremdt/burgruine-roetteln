@@ -1,0 +1,74 @@
+---
+import Box from "../../components/box.astro";
+import Container from "../../components/container.astro";
+---
+
+<section class="py-24 lg:py-40">
+  <Container class="grid grid-cols-5 gap-16">
+    <div class="col-span-5 lg:col-span-3">
+      <h2
+        class="mb-2 flex items-center font-sans font-medium text-neutral-600 uppercase before:mr-4 before:block before:h-px before:w-8 before:bg-neutral-600"
+      >
+        Über die Burg
+      </h2>
+
+      <p class="mb-4 text-3xl">
+        Eine der größten und imposantesten Burgruinen Südbadens. Mit einer Länge
+        von 300 Metern und einer Breite von 30 Metern erstreckt sie sich auf
+        einem Bergsporn hoch über Lörrach, am Rande des Dreiländerecks D-CH-F.
+      </p>
+
+      <p class="mb-4 text-xl">
+        Die Burganlage, eine schöne Panoramasicht vom hohen Bergfried, ein
+        Museum, ein Biergarten in der Unterburg und ein gepflegter Grillplatz
+        direkt hinter der Burg, bieten ein schönes Ausflugsziel für Jung und
+        Alt. In den Sommermonaten finden die Burgfestspiele statt und das
+        Restaurant und der Biergarten bieten ein gutes kulinarisches Angebot in
+        schönem Ambiente.
+      </p>
+
+      <p class="text-xl">
+        Nach vorheriger Absprache gibt es Führungen und auch Themenführungen.
+        Ebenso ist es möglich auf Rötteln standesamtlich zu heiraten.
+      </p>
+    </div>
+
+    <Box class="col-span-5 lg:col-span-2">
+      <dl>
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-clock"></use>
+          </svg>
+          Öffnungszeiten
+        </dt>
+        <dd class="ml-10">
+          Täglich 10:00 - 18:00 Uhr<br />Der letzte Einlass ist eine halbe
+          Stunde vorher.
+        </dd>
+        <dt
+          class="mt-4 flex items-center gap-4 border-t border-neutral-300 pt-4 font-medium text-neutral-900"
+        >
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-map-pin"></use>
+          </svg>
+          Lage
+        </dt>
+        <dd class="ml-10">
+          Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg
+        </dd>
+        <dt
+          class="mt-4 flex items-center gap-4 border-t border-neutral-300 pt-4 font-medium text-neutral-900"
+        >
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-cloud-lightning"></use>
+          </svg>
+          Ausnahmen
+        </dt>
+        <dd class="ml-10">
+          Bei Eis- oder Schneeglätte sowie Unwetter bleiben die Oberburg und das
+          Museum geschlossen.
+        </dd>
+      </dl>
+    </Box>
+  </Container>
+</section>

@@ -1,0 +1,42 @@
+---
+import Container from "./container.astro";
+---
+
+<section class="py-24 lg:py-40">
+  <Container>
+    <dl class="grid grid-cols-1 gap-16 font-sans md:grid-cols-3">
+      <div>
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-clock"></use>
+          </svg>
+          Öffnungszeiten Unterburg
+        </dt>
+        <dd class="ml-10">
+          Täglich 10:00 - 18:00 Uhr<br />Der letzte Einlass ist eine halbe
+          Stunde vorher
+        </dd>
+      </div>
+      <div>
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-clock"></use>
+          </svg>
+          Öffnungszeiten Oberburg
+        </dt>
+        <dd class="ml-10">Samstag & Sonntag 15:00 - 18:00 Uhr</dd>
+      </div>
+      <div>
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-map-pin"></use>
+          </svg>
+          Lage
+        </dt>
+        <dd class="ml-10">
+          Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg
+        </dd>
+      </div>
+    </dl>
+  </Container>
+</section>

@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import clsx from "clsx";
+
+interface Props extends HTMLAttributes<"div"> {
+  tag?: "div" | "section" | "article";
+}
+
+const { tag = "div", class: className, ...props } = Astro.props;
+const Tag = tag;
+---
+
+<Tag class={clsx("mx-auto max-w-7xl px-4", className)} {...props}><slot /></Tag>

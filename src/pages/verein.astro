@@ -1,0 +1,16 @@
+---
+import Gallery from "../components/gallery.astro";
+import ImageHero from "../components/image-hero.astro";
+import BaseLayout from "../layouts/base-layout.astro";
+import Intro from "../views/verein/intro.astro";
+import Stats from "../views/verein/stats.astro";
+import Work from "../views/verein/work.astro";
+---
+
+<BaseLayout title="Der Verein">
+  <ImageHero>Der Verein</ImageHero>
+  <Intro />
+  <Work />
+  <Stats />
+  <Gallery title="Bilder unserer Arbeitsgruppe" />
+</BaseLayout>

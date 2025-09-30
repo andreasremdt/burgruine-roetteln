@@ -1,0 +1,25 @@
+---
+import Container from "../container.astro";
+---
+
+<!--bg-neutral-900 text-neutral-300 -->
+<div class="bg-kornblau-400 font-medium text-white">
+  <Container
+    class="flex flex-wrap items-center justify-between gap-4 py-4 text-sm"
+  >
+    <p class="hidden items-center gap-2 md:flex">
+      <svg role="presentation" width="18" height="18">
+        <use href="/symbol-defs.svg#icon-clock"></use>
+      </svg>Täglich geöffnet von 10:00 - 18:00 Uhr
+    </p>
+
+    <a
+      href="/besuchen#veranstaltungen"
+      class="flex items-center gap-2 transition-colors hover:text-white focus-visible:text-white"
+    >
+      <svg role="presentation" width="18" height="18">
+        <use href="/symbol-defs.svg#icon-bell"></use>
+      </svg>Nächste Veranstaltung: 1. Mai Hock auf Rötteln
+    </a>
+  </Container>
+</div>

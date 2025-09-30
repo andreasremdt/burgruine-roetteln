@@ -1,0 +1,60 @@
+---
+import Button from "../../components/button.astro";
+import Container from "../../components/container.astro";
+---
+
+<section class="py-24 lg:py-40" id="arbeitsgruppe">
+  <Container>
+    <h2
+      class="mb-2 flex items-center font-sans font-medium text-neutral-600 uppercase before:mr-4 before:block before:h-px before:w-8 before:bg-neutral-600"
+    >
+      Unterstützen Sie uns
+    </h2>
+    <p class="mb-16 max-w-1/2 text-5xl text-neutral-900">
+      Helfen Sie mit die Geschichte der Burg Rötteln zu erhalten.
+    </p>
+
+    <div class="ml-[35%]">
+      <dl class="mb-16 grid grid-cols-3 gap-16">
+        <div class="flex flex-col-reverse gap-4">
+          <dt class="font-sans font-medium text-neutral-600 uppercase">
+            Mitglieder
+          </dt>
+          <dd class="text-7xl text-neutral-900">25</dd>
+        </div>
+        <div class="flex flex-col-reverse gap-4">
+          <dt class="font-sans font-medium text-neutral-600 uppercase">
+            Arbeitsstunden
+          </dt>
+          <dd class="text-7xl text-neutral-900">833+</dd>
+        </div>
+        <div class="flex flex-col-reverse gap-4">
+          <dt class="font-sans font-medium text-neutral-600 uppercase">
+            Besucher
+          </dt>
+          <dd class="text-7xl text-neutral-900">100.331</dd>
+        </div>
+      </dl>
+
+      <p class="mb-4 text-xl">
+        Unterstützen Sie unsere Bemühungen in dem Sie Mitglied werden oder
+        lassen Sie uns eine Spende zukommen! Spenden an unseren gemeinnützigen
+        Verein sind für Sie steuerlich abzugsfähig.
+      </p>
+
+      <p class="mb-4 text-xl">
+        Auf Anfrage unter <a
+          href="mailto:info@burgruine-roetteln.de"
+          class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+          >info@burgruine-roetteln.de</a
+        > senden wir Ihnen gerne eine Beitrittserklärung oder die Nummer des Spendenkontos
+        zu.
+      </p>
+
+      <div class="flex flex-wrap gap-1">
+        <Button href="#">Mitglied werden</Button>
+        <Button href="#" variant="secondary">Spenden</Button>
+      </div>
+    </div>
+  </Container>
+</section>

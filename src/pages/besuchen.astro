@@ -1,0 +1,18 @@
+---
+import ImageHero from "../components/image-hero.astro";
+import OpeningHours from "../components/opening-hours.astro";
+import BaseLayout from "../layouts/base-layout.astro";
+import Directions from "../views/besuchen/directions.astro";
+import EntranceFees from "../views/besuchen/entrance-fees.astro";
+import Events from "../views/besuchen/events.astro";
+import TourOverview from "../components/tour-overview.astro";
+---
+
+<BaseLayout title="Ihr Besuch">
+  <ImageHero>Ihr Besuch</ImageHero>
+  <OpeningHours />
+  <EntranceFees />
+  <Directions />
+  <Events />
+  <TourOverview variant="dark" />
+</BaseLayout>

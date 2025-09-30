@@ -1,0 +1,96 @@
+---
+import Container from "../../components/container.astro";
+import Input from "../../components/input.astro";
+import Label from "../../components/label.astro";
+import SubmitButton from "../../components/submit-button.astro";
+import Textarea from "../../components/textarea.astro";
+---
+
+<section class="py-24 lg:py-40">
+  <Container class="grid grid-cols-1 gap-16 md:grid-cols-3">
+    <dl
+      class="order-2 grid grid-cols-1 gap-8 font-sans sm:grid-cols-2 md:order-1 md:grid-cols-1 md:gap-0"
+    >
+      <div class="md:mb-4 md:border-b md:border-neutral-300 md:pb-4">
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-clock"></use>
+          </svg>
+          Öffnungszeiten Unterburg
+        </dt>
+        <dd class="ml-10">
+          Täglich 10:00 - 18:00 Uhr<br />Der letzte Einlass ist eine halbe
+          Stunde vorher
+        </dd>
+      </div>
+      <div class="md:mb-4 md:border-b md:border-neutral-300 md:pb-4">
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-clock"></use>
+          </svg>
+          Öffnungszeiten Oberburg
+        </dt>
+        <dd class="ml-10">Samstag & Sonntag 15:00 - 18:00 Uhr</dd>
+      </div>
+      <div class="md:mb-4 md:border-b md:border-neutral-300 md:pb-4">
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-map-pin"></use>
+          </svg>
+          Lage
+        </dt>
+        <dd class="ml-10">
+          Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg
+        </dd>
+      </div>
+      <div>
+        <dt class="flex items-center gap-4 font-medium text-neutral-900">
+          <svg role="presentation" width="24" height="24">
+            <use href="/symbol-defs.svg#icon-cloud-lightning"></use>
+          </svg>
+          Ausnahmen
+        </dt>
+        <dd class="ml-10">
+          Bei Eis- oder Schneeglätte sowie Unwetter bleiben die Oberburg und das
+          Museum geschlossen.
+        </dd>
+      </div>
+    </dl>
+
+    <form
+      action=""
+      method="POST"
+      class="z-10 order-1 rounded bg-white md:order-2 md:col-span-2 md:-mt-60 md:border md:border-neutral-300 md:p-8 lg:p-16"
+    >
+      <h1 class="text-5xl text-neutral-900">Treten Sie mit uns in Kontakt</h1>
+      <p class="mb-8 text-xl">
+        Haben Sie Fragen zu unseren Angeboten oder wollen Sie einen Besuch
+        vereinbaren? Dann schreiben Sie uns, wir melden uns schnellst möglich
+        bei Ihnen.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
+        <div class="mb-4">
+          <Label for="name">Ihr Name</Label>
+          <Input name="name" id="name" required />
+        </div>
+        <div class="mb-4">
+          <Label for="email">Ihre E-Mail-Adresse</Label>
+          <Input type="email" name="email" id="email" required />
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <Label for="subject">Betreff</Label>
+        <Input name="subject" id="subject" required />
+      </div>
+
+      <div class="mb-4">
+        <Label for="message">Ihre Nachricht</Label>
+        <Textarea name="message" id="message" rows="5" required />
+      </div>
+
+      <SubmitButton>Nachricht senden &rarr;</SubmitButton>
+    </form>
+  </Container>
+</section>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/base-layout.astro";
+import About from "../../views/fuehrungen/about.astro";
+import Gallery from "../../views/fuehrungen/gallery.astro";
+import Hero from "../../views/fuehrungen/hero.astro";
+---
+
+<BaseLayout title="Kindergeburtstage">
+  <Hero title="Kindergeburtstage" subtitle="Entdecken Sie Geschichte">
+    Topfschlagen, blinde Kuh, gesellige Gemeinschaftsspiele, Geschenke? Das war
+    einmal. Heute sind Kindergeburtstage oftmals durchgestylte Events für
+    hunderte oder tausende Euro in den verschiedensten Locations
+  </Hero>
+  <About type="Kindergeburtstag">
+    <p class="mb-4 text-xl">
+      Ein Konzept für Kinder von 7 bis ca. 11 Jahren, bei dem Alle (auch die
+      Eltern) noch etwas lernen und staunen können.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Die Familie (Sippe) des Geburtstagskindes trifft sich am Grillplatz hinter
+      der Burg und hat dort ihr Lager. Der Burgwächter hört das laute Getöse
+      dieses Lages und kontrolliert natürlich diese vermeindliche „Räuberbande“.
+      Nach erklärenden Worten nimmt der Wächter die Sippe zu einem Rundgang über
+      die Burg mit und zeigt in kindgerechter Form die Burg und das Leben der
+      Ritter. Das Geburtstagskind wird nach dem Rittereid zum Ritter geschlagen
+      und darf seine Sippe bei der nun folgenden Schatzsuche leiten.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Die ideale Anzahl der Kinder ist ca. 10 - 12, das Geburtstagskind sollte
+      lesen können. Die Eltern (Onkel, Tante oder ander Begleitpersonen) sind
+      herzlich gerne zur Führung mit Eingeladen. Der ganze lehrreiche Spaß für
+      Jung und Alt dauert ca. 2,5 bus 3 Stunden. Die Kosten betragen pauschal
+      für Führung in mittelalterlicher Gewandung, Ritterschlag mit einem
+      Geschenk für den „neuen“ Ritter und der Schatzsuche 150.- Euro.
+    </p>
+
+    <p class="mb-4 text-xl">
+      Anfragen unter Telefon 07621/56494 oder direkt per Mail an <a
+        href="mailto:info@burgruine-roetteln.de"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >info@burgruine-roetteln.de</a
+      >
+    </p>
+  </About>
+  <Gallery />
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import Button from "../../components/button.astro";
+import Map from "../../components/map.astro";
+---
+
+<section
+  class="bg-primary-50 grid grid-cols-1 lg:grid-cols-[auto_minmax(0%,640px)_minmax(0%,640px)_auto]"
+  id="anfahrt"
+>
+  <Map class="order-1 col-span-2 hidden h-full w-full lg:block" />
+
+  <div class="order-1 py-16 pr-4 pl-4 lg:pl-16">
+    <h2 class="mb-8 text-5xl text-neutral-900">Anfahrt</h2>
+
+    <h3 class="mb-2 font-sans font-medium text-neutral-600 uppercase">
+      Mit der Bahn
+    </h3>
+    <p class="mb-8 text-xl">
+      Bis Haltestelle Haagen/Messe. Von dort aus zu Fuß dem ausgeschilderten Weg
+      folgen.<br />Gehzeit ca. 30 Minuten.
+    </p>
+
+    <h3 class="mb-2 font-sans font-medium text-neutral-600 uppercase">
+      Mit dem Bus
+    </h3>
+    <p class="mb-8 text-xl">
+      SWEG Linie 16 bis Haltestelle Röttelnweiler. Von dort Gehzeit ca. 10
+      Minuten.<br />
+      SWEG Linie 2 von Kandern über Busbahnhof Lörrach. Ab dort wieder mit Linie
+      16.
+    </p>
+
+    <h3 class="mb-2 font-sans font-medium text-neutral-600 uppercase">
+      Mit dem Auto
+    </h3>
+    <p class="mb-8 text-xl">
+      Burgruine Rötteln, 79541 Lörrach, Baden-Württemberg<br />
+      Zu Stoßzeiten ist die Anzahl der Parkmöglichkeiten begrenzt. Sie können auf
+      die Waldparkplätze <a
+        href="https://maps.app.goo.gl/ykTf27VdnxUSSCnY6"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >Stern</a
+      > oder <a
+        href="https://maps.app.goo.gl/CAW4Qf4joHBaVTTdA"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        class="underline transition-colors hover:text-neutral-600 focus-visible:text-neutral-600"
+        >Fohrenbuck</a
+      > ausweichen.
+    </p>
+    <Button
+      href="https://maps.app.goo.gl/MHyBLAMBoeECbzAAA"
+      target="_blank"
+      rel="noopener noreferrer nofollow">Routenplaner</Button
+    >
+  </div>
+</section>
